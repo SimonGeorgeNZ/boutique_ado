@@ -1,11 +1,8 @@
 {% extends "base.html" %}
-
 {% load static %}
-
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
-
 {% endblock %}
 
 {% block page_header %}
@@ -22,10 +19,12 @@
         <div class="row">
             <div class="col">
                 <hr>
+                <hr>
+                <hr>
                 <h2 class="logo-font mb-4">My Profile</h2>
                 <hr>
             </div>
         </div>
+
+        {{ profile }}
 {% endblock %}
-
-
