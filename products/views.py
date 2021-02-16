@@ -78,7 +78,7 @@ def product_detail(request, product_id):
 def add_product(request):
 
     if not request.user.is_superuser:
-        message.error(request, 'Sorry, only store owners can do that.')
+        messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
@@ -88,7 +88,7 @@ def add_product(request):
             messages.success(request, "Successfully added product")
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            message.error(request, 'Failed to add product. Please ensure the form is valid')
+            messages.error(request, 'Failed to add product. Please ensure the form is valid')
 
     else:
         form = ProductForm()
@@ -105,7 +105,7 @@ def add_product(request):
 def edit_product(request, product_id):
 
     if not request.user.is_superuser:
-        message.error(request, 'Sorry, only store owners can do that.')
+        messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
@@ -134,7 +134,7 @@ def edit_product(request, product_id):
 def delete_product(request, product_id):
 
     if not request.user.is_superuser:
-        message.error(request, 'Sorry, only store owners can do that.')
+        messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
