@@ -5,6 +5,7 @@ from django.conf import settings
 
 from .forms import OrderForm
 from .models import Order, OrderLineItem
+
 from products.models import Product
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
@@ -47,7 +48,7 @@ def checkout(request):
             'town_or_city': request.POST['town_or_city'],
             'street_address1': request.POST['street_address1'],
             'street_address2': request.POST['street_address2'],
-            'country': request.POST['country'],
+            'county': request.POST['county'],
         }
         order_form = OrderForm(form_data)
 
