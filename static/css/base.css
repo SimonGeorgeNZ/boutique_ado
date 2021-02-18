@@ -21,6 +21,7 @@ body {
 
 .logo-font {
     text-transform: uppercase;
+    text-align: center;
 }
 
 .main-logo-link {
@@ -287,4 +288,60 @@ input[name='q']::placeholder {
     body {
         height: calc(100vh - 116px);
     }
+
+    .nav-link {
+        padding: 0.5rem;
+        font-size: .7rem;
+        padding-bottom: .1rem;
+    }
+
+    .nav-link i.fa-lg {
+        font-size: 1rem;
+    }
+
+    .logo-font {
+        font-size: 1.5rem;
+    }
+
+    .navbar-toggler {
+        padding: .3rem .3rem;
+        font-size: .8rem;
+    }
+
+    #delivery-banner h4 {
+        font-size: .9rem;
+    }
+
+    .list-inline-item {
+        margin-right: 0px!important;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .dropdown .dropdown-menu {
+        left: -90%;
+    }
+
+    .btn.btn-outline-black.rounded-0,
+    .btn.btn-black.rounded-0 {
+        padding: .375rem .375rem;
+    }
+
+    .btn.btn-outline-black.rounded-0.btn-lg,
+    .btn.btn-black.rounded-0.btn-lg {
+        padding: .375rem .375rem;
+        font-size: .75rem;
+    }
+
+    .increment-qty, .decrement-qty {
+        padding: .25rem .5rem !important;
+    }
+
+    .mt-3 {
+        text-align: justify;
+    }
+
 }
